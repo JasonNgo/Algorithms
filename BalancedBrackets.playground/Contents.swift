@@ -4,12 +4,6 @@
 
 import Cocoa
 
-enum Bracket: Character {
-    case paraenthesis = "("
-    case square = "["
-    case curly = "{"
-}
-
 public struct Stack<Value> {
     private var storage: [Value] = []
     
@@ -30,6 +24,7 @@ public struct Stack<Value> {
         return storage.popLast()
     }
 }
+
 
 func balancedBrackets(input: String) -> Bool {
     guard !input.isEmpty else {
